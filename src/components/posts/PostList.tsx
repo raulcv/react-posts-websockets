@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from 'react'
+import NewPost from './NewPost'
 
 interface Post {
   id: string
@@ -26,10 +27,11 @@ function PostList({ posts, setPage, currentPage }: InitialProps) {
 
   return (
     <div>
-      <h1>LIST OF POSTS</h1>
+      <h1>LIST POST</h1>
       <div>Current page {currentPage}</div>
       <input type="text" onChange={handleChange} />
       <div>
+        <NewPost />
         {
           posts.map((post) => (
             <div key={post.id}>
